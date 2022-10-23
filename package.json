@@ -1,0 +1,39 @@
+{
+  "name": "layout-designer-project-59",
+  "version": "1.0.0",
+  "description": "hexlet education project #3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denivladislav/layout-designer-project-59.git"
+  },
+  "author": "denivladislav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denivladislav/layout-designer-project-59/issues"
+  },
+  "homepage": "https://github.com/denivladislav/layout-designer-project-59#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-pug-linter": "^1.5.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.0",
+    "pug-lint": "^2.6.0",
+    "pug-lint-config-clock": "^2.0.0",
+    "sass": "^1.55.0",
+    "stylelint": "^14.14.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
