@@ -1,0 +1,42 @@
+$theme-colors: (
+  "gray": #EFEFEF,
+  "primary": #4545A5,
+  "secondary": #6C757D,
+  "success": #28A745,
+  "info": #17A2B8,
+  "warning": #FFC107,
+  "danger": #DC3545,
+  "light": #FBFBFB,
+  "dark": #343A40,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1540px,
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  23: $spacer * 0.875,
+  34: $spacer * 1.125,
+);
+
+$enable-shadows: true;

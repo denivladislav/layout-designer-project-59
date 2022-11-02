@@ -1,0 +1,39 @@
+@mixin hide-scrollbar() {
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.filter-white {
+  filter: invert(100%);
+}
+
+.filter-light {
+  filter: invert(97%) sepia(5%) saturate(0%) hue-rotate(268deg) brightness(111%) contrast(97%);
+}
+
+.round {
+  border-radius: 100px;
+}
+
+.centerized {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}

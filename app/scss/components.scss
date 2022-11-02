@@ -1,0 +1,77 @@
+.chat {
+  border-radius: 1rem;
+}
+
+.menu {
+  border-radius: 1rem 0 0 0;
+}
+
+.sidebar {
+  @include hide-scrollbar();
+  border-right: 1px solid map-get($theme-colors, "gray");
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.menu-list-link {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &:visited {
+    color: map-get($theme-colors, "light");
+  }
+}
+
+.search-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid map-get($theme-colors, "gray");
+}
+
+.contact-card {
+  text-decoration: none;
+  color: map-get($theme-colors, "dark");
+
+  & .contact-status {
+    color: map-get($theme-colors, "secondary");
+  }
+
+  &:hover {
+    color: map-get($theme-colors, "light");
+    background-color: map-get($theme-colors, "primary");
+
+    & .contact-status {
+      color: map-get($theme-colors, "light");
+    }
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, xl)) {
+  .chat-box {
+    display: none;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .menu {
+    border-radius: 0;
+  }
+
+  .menu-list-item:first-child {
+    margin-right: auto;
+  }
+
+  .menu-list-item-text {
+    display: none;
+  }
+}

@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/denivladislav/layout-designer-project-59#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^5.0.0",
     "gulp-pug-linter": "^1.5.0",
     "gulp-sass": "^5.1.0",
+    "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^2.0.0",
     "pug-lint": "^2.6.0",
     "pug-lint-config-clock": "^2.0.0",
@@ -29,6 +32,7 @@
     "stylelint": "^14.14.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0"
   },
