@@ -36,12 +36,15 @@
     }],
   }
 
-each contactsArray, letter in contacts
-  .mb-5
-    p.text-muted= letter
-    each contact in contactsArray
-      a.contact-card.mt-23.px-3.py-4.shadow-sm.d-flex(href='#')
-        img.round(src=contact.avatar, alt='user-avatar', width='50px', height='50px')
-        .mx-4
-          p.m-0.fw-bold= contact.name
-          p.m-0.small.contact-status= contact.status
+p.fw-bold.fs-3.mb-4 Контакты
+  form.mb-5(action='')
+    input.p-4.search-input(placeholder='Поиск по контактам', id='search', type='search')
+  each contactsArray, letter in contacts
+    .mb-5
+      p.text-muted= letter
+      each contact in contactsArray
+        a.sidebar-card.mt-23.px-3.py-4.shadow-sm.d-flex(href='#')
+          img.round(src=contact.avatar, alt='user-avatar', width='50px', height='50px')
+          .mx-4
+            p.m-0.fw-bold= contact.name
+            p.m-0.small.sidebar-card-subtext= contact.status

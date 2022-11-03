@@ -6,26 +6,18 @@
   border-radius: 1rem 0 0 0;
 }
 
+.nav-button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: map-get($theme-colors, "light");
+}
+
 .sidebar {
   @include hide-scrollbar();
   border-right: 1px solid map-get($theme-colors, "gray");
-}
-
-.menu-list {
-  display: flex;
-  list-style: none;
-  padding-inline-start: 0;
-}
-
-.menu-list-link {
-  color: inherit;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-
-  &:visited {
-    color: map-get($theme-colors, "light");
-  }
 }
 
 .search-input {
@@ -35,11 +27,19 @@
   border-bottom: 1px solid map-get($theme-colors, "gray");
 }
 
-.contact-card {
+.sidebar-card {
+  position: relative;
+
   text-decoration: none;
   color: map-get($theme-colors, "dark");
 
-  & .contact-status {
+  & .sidebar-card-subtext {
+    color: map-get($theme-colors, "secondary");
+  }
+
+  & .sidebar-card-time {
+    position: absolute;
+    right: $spacer * 1.5;
     color: map-get($theme-colors, "secondary");
   }
 
@@ -47,7 +47,11 @@
     color: map-get($theme-colors, "light");
     background-color: map-get($theme-colors, "primary");
 
-    & .contact-status {
+    & .sidebar-card-subtext {
+      color: map-get($theme-colors, "light");
+    }
+
+    & .sidebar-card-time {
       color: map-get($theme-colors, "light");
     }
   }
@@ -67,11 +71,11 @@
     border-radius: 0;
   }
 
-  .menu-list-item:first-child {
+  .nav-logo {
     margin-right: auto;
   }
 
-  .menu-list-item-text {
+  .nav-item-name {
     display: none;
   }
 }

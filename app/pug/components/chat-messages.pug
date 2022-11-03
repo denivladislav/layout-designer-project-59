@@ -1,0 +1,34 @@
+-
+  var messages = [
+    {
+      author: "Вениамин Редакторович",
+      text: "o_O",
+      avatar: "/images/avatar_4.jpg",
+      time: "11:45"
+    },
+    {
+      author: "Джедай Падаванов",
+      text: "Привет, скоро третий проект? Уже скоро надо будет выложить",
+      avatar: "/images/avatar_2.jpg",
+      time: "10:12"
+    },
+    {
+      author: "Алексей Примадонин",
+      text: "Тесты упали >_<",
+      avatar: "/images/avatar_2.jpg",
+      time: "08:53"
+    },
+  ]
+
+p.fw-bold.fs-3.mb-4 Сообщения
+  form.mb-5(action='')
+    input.p-4.search-input(placeholder='Поиск по сообщениям', id='search', type='search')
+  each message in messages
+    .mb-5
+      a.sidebar-card.mt-23.px-3.py-4.shadow-sm.d-flex(href='#')
+        img.round(src=message.avatar, alt='user-avatar', width='50px', height='50px')
+        .mx-4.overflow-hidden
+          .d-flex
+            p.m-0.fw-bold= message.author
+            p.mb-0.sidebar-card-time= message.time
+          p.m-0.small.sidebar-card-subtext.ellipsis= message.text
