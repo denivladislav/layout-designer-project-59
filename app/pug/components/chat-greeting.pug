@@ -1,4 +1,10 @@
+-
+  var componentData = {
+    message: "Привет, Кодовёнок",
+    subMessage: "Выбери чат, чтобы начать общаться"
+  }
+
 .centerized
   img.round.mb-23(src='images/avatar_1.jpg', alt='hexlet mascotte', width='200px', height='200px')
-  h6.m-0 Привет, Кодовёнок
-  p.m-0.small.text-secondary Выбери чат, чтобы начать общаться
+  h6.m-0= componentData.message
+  p.m-0.small.text-secondary= componentData.subMessage

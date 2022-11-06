@@ -20,9 +20,15 @@
     },
   ]
 
-p.fw-bold.fs-3.mb-4 Сообщения
-  form.mb-5(action='')
-    input.p-4.search-input(placeholder='Поиск по сообщениям', id='search', type='search')
+  var componentData = {
+    name: "Сообщения",
+    searchPlaceholder: "Поиск по сообщениям",
+  }
+
+include search-form.pug
+
+p.fw-bold.fs-3.mb-4= componentData.name
+  +search-form(componentData.searchPlaceholder)
   each message in messages
     .mb-5
       a.sidebar-card.mt-23.px-3.py-4.shadow-sm.d-flex(href='#')

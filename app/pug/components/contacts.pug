@@ -36,9 +36,15 @@
     }],
   }
 
-p.fw-bold.fs-3.mb-4 Контакты
-  form.mb-5(action='')
-    input.p-4.search-input(placeholder='Поиск по контактам', id='search', type='search')
+  var componentData = {
+    name: "Контакты",
+    searchPlaceholder: "Поиск по контактам",
+  }
+
+include search-form.pug
+
+p.fw-bold.fs-3.mb-4= componentData.name
+  +search-form(componentData.searchPlaceholder)
   each contactsArray, letter in contacts
     .mb-5
       p.text-muted= letter

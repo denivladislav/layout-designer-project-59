@@ -9,32 +9,30 @@
     twitter: '@n_mikhaylov',
   }
 
-p.fw-bold.fs-3.mb-4 Профиль
-  form.mb-5(action='')
-    input.p-4.search-input(placeholder='Поиск по сообщениям', id='search', type='search')
+  var componentData = {
+    name: "Профиль",
+    searchPlaceholder: "Поиск по сообщениям",
+    listItems: {
+      country: "Страна",
+      phone: "Телефон",
+      email: "Email",
+      twitter: "Twitter",
+    }
+  }
+
+include search-form.pug
+
+p.fw-bold.fs-3.mb-4= componentData.name
+  +search-form(componentData.searchPlaceholder)
   .card.border-0.text-center.mb-6
     img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90px', height='90px')
     h6.card-title.mb-4= userdata.name
     .card-body.py-0
       p.card-text.text-black-50= userdata.text
   ul.list-group.list-group-flush
-    li.list-group-item.d-flex.align-items-center
-      .small
-        p.m-0.text-black-50 Страна
-        p.m-0= userdata.country
-      img.ms-auto.filter-grey(src='images/sprite.svg#globe', width='20px', height='20px', alt='globe image')
-    li.list-group-item.d-flex.align-items-center
-      .small
-        p.m-0.text-black-50 Телефон
-        p.m-0= userdata.phone
-      img.ms-auto.filter-grey(src='images/sprite.svg#phone', width='20px', height='20px', alt='phone image')
-    li.list-group-item.d-flex.align-items-center
-      .small
-        p.m-0.text-black-50 Email
-        p.m-0= userdata.email
-      img.ms-auto.filter-grey(src='images/sprite.svg#envelope', width='20px', height='20px', alt='envelope image')
-    li.list-group-item.d-flex.align-items-center
-      small
-        p.m-0.text-black-50 Twitter
-        p.m-0= userdata.twitter
-      img.ms-auto.filter-grey(src='images/sprite.svg#people', width='20px', height='20px', alt='people image')
+    each value, key in componentData.listItems 
+      li.list-group-item.d-flex.align-items-center
+        .small
+          p.m-0.text-black-50= value
+          p.m-0= userdata[key]
+        img.ms-auto.filter-grey(src=`images/sprite.svg#${key}`, width='20px', height='20px', alt=`${key} image`)
