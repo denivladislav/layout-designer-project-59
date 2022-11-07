@@ -6,7 +6,6 @@ const browserSync = require('browser-sync').create();
 const pugLint = require('gulp-pug-linter');
 const sassLint = require('gulp-stylelint');
 const sprite = require('gulp-svg-sprite');
-const concat = require('gulp-concat');
 
 const cleanJob = (done) => {
   src('./build/', {read: false})
@@ -17,7 +16,9 @@ const cleanJob = (done) => {
 
 const browserSyncJob = () => {
   browserSync.init({
-    server: { baseDir: './build/' }
+    server: {
+      baseDir: './build/',
+    }
   });
 
   watch('./app/scss/**/*.scss', sassCompileJob);
@@ -35,8 +36,6 @@ const pugLintJob = () => {
 }
 
 const sassCompileJob = (done) => {
-  // sassLintJob();
-
   src('./app/scss/app.scss')
     .pipe(sass())
     .pipe(dest('./build/styles'))

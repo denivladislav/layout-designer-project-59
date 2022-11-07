@@ -15,7 +15,11 @@
   width: 100%;
   outline: none;
   border: none;
-  border-bottom: 1px solid map-get($theme-colors, "gray");
+  box-shadow: none;
+}
+
+.search-input-submit-btn {
+  box-shadow: none;
 }
 
 .sidebar-card {

@@ -1,0 +1,62 @@
+-
+  var componentData = {
+    searchPlaceholder: "Напишите сообщение...",
+    user: {
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "/images/avatar_4.jpg"
+    },
+    messages: [
+      {
+        author: "Вениамин Редакторович",
+        text: "Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?",
+        time: "8 минут назад",
+        avatar: "/images/avatar_4.jpg",
+      },
+      {
+        author: "self",
+        text: "Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень",
+        time: "8 минут назад",
+        avatar: "/images/avatar_1.jpg",
+      },
+      {
+        author: "Вениамин Редакторович",
+        text: "Лады",
+        time: "5 минут назад",
+        avatar: "/images/avatar_4.jpg",
+      },
+      {
+        author: "self",
+        text: "А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие",
+        time: "3 минут назад",
+        avatar: "/images/avatar_1.jpg",
+      },
+      {
+        author: "Вениамин Редакторович",
+        text: "о_О",
+        time: "Только что",
+        avatar: "/images/avatar_4.jpg",
+      },
+    ],
+  }
+
+.me-4.px-3.py-4.d-flex.border-bottom
+  img.round(src=componentData.user.avatar, alt='user-avatar', width='50px', height='50px')
+  .mx-4
+    p.m-0.fw-bold= componentData.user.name
+    p.m-0.small.sidebar-card-subtext= componentData.user.status
+.px-5.mt-5
+  each message in componentData.messages
+    - var isMessageOwn = message.author === 'self'
+    .d-flex.align-items-end.mb-3(class={"justify-content-end": isMessageOwn})
+      img.me-3.round(src=message.avatar, alt='user-avatar', width='50px', height='50px')
+      .radius.shadow-sm.max-width-message-text.p-4(class={'bg-primary': isMessageOwn, 'bg-light': !isMessageOwn})
+        if !isMessageOwn
+          p.mb-1.fw-bold= message.author
+        p.mb-2(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.text
+        p.m-0.pt-1.border-top.text-secondary.opacity-40(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.time
+form.mt-5.mx-5.border-top(action='')
+  .input-group.p-2.d-flex.align-items-center
+    input.p-4.form-control.search-input(placeholder=componentData.searchPlaceholder, id='search', type='search')
+    button.btn.bg-primary.round.p-0(type='submit', width='21px', height='21px')
+      img.filter-light(src='images/sprite.svg#cursor', alt='submit message', width='50px', height='50px')
