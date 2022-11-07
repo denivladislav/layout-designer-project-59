@@ -1,11 +1,3 @@
-.chat {
-  border-radius: 1rem;
-}
-
-.menu {
-  border-radius: 1rem 0 0 0;
-}
-
 .nav-button {
   padding: 0;
   display: flex;
@@ -17,7 +9,6 @@
 
 .sidebar {
   @include hide-scrollbar();
-  border-right: 1px solid map-get($theme-colors, "gray");
 }
 
 .search-input {
@@ -54,28 +45,5 @@
     & .sidebar-card-time {
       color: map-get($theme-colors, "light");
     }
-  }
-}
-
-@media (max-width: map-get($grid-breakpoints, xl)) {
-  .chat-box {
-    display: none;
-  }
-
-  .sidebar {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .menu {
-    border-radius: 0;
-  }
-
-  .nav-logo {
-    margin-right: auto;
-  }
-
-  .nav-item-name {
-    display: none;
   }
 }

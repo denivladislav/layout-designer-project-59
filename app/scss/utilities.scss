@@ -1,0 +1,84 @@
+@import '../../node_modules/bootstrap/scss/_utilities.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "radius": (
+      property: border-radius,
+      class: "radius",
+      responsive: true,
+      values: (
+        null: 1rem,
+        "none": 0,
+      )
+    ),
+    "radius-left": (
+      property: border-top-left-radius border-bottom-left-radius,
+      class: "radius-left",
+      responsive: true,
+      values: (
+        null: 1rem,
+      )
+    ),
+    "radius-right": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: "radius-right",
+      responsive: true,
+      values:(
+        null: 1rem,
+      )
+    ),
+    "radius-left-top": (
+      property: border-top-left-radius,
+      class: "radius-left-top",
+      responsive: true,
+      values:(
+        null: 1rem,
+      )
+    ),
+    "border": (
+      property: border,
+      class: border,
+      responsive: true,
+      values: (
+        null: 1px solid map-get($theme-colors, "gray")
+      ),
+    ),
+    "border-top":(
+      property: border-top,
+      class: border-top,
+      responsive: true,
+      values: (
+        null: 1px solid map-get($theme-colors, "gray")
+      ),
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      class: border-bottom,
+      responsive: true,
+      values: (
+        null: 1px solid map-get($theme-colors, "gray")
+      ),
+    ),
+    "border-left": (
+      property: border-left,
+      class: border-left,
+      responsive: true,
+      values: (
+        null: 1px solid map-get($theme-colors, "gray")
+      ),
+    ),
+    "border-right": (
+      property: border-right,
+      class: border-right,
+      responsive: true,
+      values: (
+        null: 1px solid map-get($theme-colors, "gray")
+      ),
+    ),
+  )
+);
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
