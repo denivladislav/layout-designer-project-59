@@ -10,8 +10,6 @@
   }
 
   var componentData = {
-    name: "Профиль",
-    searchPlaceholder: "Поиск по сообщениям",
     listItems: {
       country: "Страна",
       phone: "Телефон",
@@ -22,8 +20,8 @@
 
 include search-form.pug
 
-h2.fw-bold.mb-4= componentData.name
-+search-form(componentData.searchPlaceholder)
+h2.fw-bold.mb-4 Профиль
++search-form("Поиск по сообщениям")
 .card.border-0.text-center.mb-6
   img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90px', height='90px')
   h6.card-title.mb-4= userdata.name

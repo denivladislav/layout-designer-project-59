@@ -36,15 +36,10 @@
     }],
   }
 
-  var componentData = {
-    name: "Контакты",
-    searchPlaceholder: "Поиск по контактам",
-  }
-
 include search-form.pug
 
-h2.fw-bold.mb-4= componentData.name
-+search-form(componentData.searchPlaceholder)
+h2.fw-bold.mb-4 Контакты
++search-form("Поиск по контактам")
 each contactsArray, letter in contacts
   .mb-5
     p.text-muted= letter
