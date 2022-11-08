@@ -24127,6 +24127,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.no-scroll-overflow {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.no-scroll-overflow::-webkit-scrollbar {
+  display: none;
+}
+
 .filter-white {
   filter: invert(100%);
 }
@@ -24160,16 +24170,6 @@ textarea.form-control-lg {
   background: none;
   border: none;
   color: #FBFBFB;
-}
-
-.sidebar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.sidebar::-webkit-scrollbar {
-  display: none;
 }
 
 .search-input {

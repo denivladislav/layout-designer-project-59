@@ -7,10 +7,6 @@
   color: map-get($theme-colors, "light");
 }
 
-.sidebar {
-  @include hide-scrollbar();
-}
-
 .search-input {
   width: 100%;
   outline: none;

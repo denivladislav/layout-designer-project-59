@@ -12,6 +12,10 @@
   }
 }
 
+.no-scroll-overflow {
+  @include hide-scrollbar();
+}
+
 .filter-white {
   filter: invert(100%);
 }

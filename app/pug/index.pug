@@ -21,25 +21,11 @@ html(lang='ru')
   body.vh-100.bg-gray.p-xl-4
     .container-xxl.radius.shadow-sm.bg-white.h-100
       .row.h-100
-        .col-12.col-xl-4.sidebar.d-block.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
+        .col-12.col-xl-4.d-block.no-scroll-overflow.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
           .row.radius-none.radius-left-top-xl.bg-primary
             .col.p-0
-              ul.nav.m-3.d-flex.align-items-center(id='myTab', role='tablist')
-                li.me-auto.me-xl-0
-                  img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25px', height='25px')
-                li.nav-item.px-2.small(role='presentation')
-                  button.nav-button.active(id='contacts', data-bs-toggle='tab', data-bs-target='#contacts-tab-pane', type='button', role='tab', aria-controls='contacts-tab-pane', aria-selected='true')
-                    img.filter-light.mx-2(src='images/sprite.svg#people', alt='contacts image', width='25px', height='35px')
-                    p.d-none.d-xl-block.m-0= componentData.contacts
-                li.nav-item.px-2.small(role='presentation')
-                  button.nav-button(id='chat', data-bs-toggle='tab', data-bs-target='#chat-tab-pane', type='button', role='tab', aria-controls='chat-tab-pane', aria-selected='true')
-                    img.filter-light.mx-2(src='images/sprite.svg#chat', alt='chat image', width='25px', height='35px')
-                    p.d-none.d-xl-block.m-0= componentData.chat
-                li.nav-item.px-2.small(role='presentation')
-                  button.nav-button(id='profile', data-bs-toggle='tab', data-bs-target='#profile-tab-pane', type='button', role='tab', aria-controls='profile-tab-pane', aria-selected='true')    
-                    img.filter-light.mx-2(src='images/sprite.svg#person', alt='profile image', width='25px', height='35px')
-                    p.d-none.d-xl-block.m-0= componentData.profile
-          .row
+              include components/nav.pug
+          .row.no-scroll-overflow.mb-auto
             .col.pt-5.px-4
               .tab-content(id='myTabContent')
                 .tab-pane.fade.show.active(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0')
