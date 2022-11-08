@@ -22,17 +22,17 @@
 
 include search-form.pug
 
-p.fw-bold.fs-3.mb-4= componentData.name
-  +search-form(componentData.searchPlaceholder)
-  .card.border-0.text-center.mb-6
-    img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90px', height='90px')
-    h6.card-title.mb-4= userdata.name
-    .card-body.py-0
-      p.card-text.text-black-50= userdata.text
-  ul.list-group.list-group-flush
-    each value, key in componentData.listItems 
-      li.list-group-item.d-flex.align-items-center
-        .small
-          p.m-0.text-black-50= value
-          p.m-0= userdata[key]
-        img.ms-auto.filter-grey(src=`images/sprite.svg#${key}`, width='20px', height='20px', alt=`${key} image`)
+h2.fw-bold.mb-4= componentData.name
++search-form(componentData.searchPlaceholder)
+.card.border-0.text-center.mb-6
+  img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90px', height='90px')
+  h6.card-title.mb-4= userdata.name
+  .card-body.py-0
+    p.card-text.text-black-50= userdata.text
+ul.list-group.list-group-flush
+  each value, key in componentData.listItems 
+    li.list-group-item.d-flex.align-items-center
+      .small
+        p.m-0.text-black-50= value
+        p.m-0= userdata[key]
+      img.ms-auto.filter-grey(src=`images/sprite.svg#${key}`, width='20px', height='20px', alt=`${key} image`)

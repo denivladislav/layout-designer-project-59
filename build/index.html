@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>layout-designer-project-lvl3</title>
+    <link rel="stylesheet" href="../styles/app.css">
+  </head>
+  <body class="vh-100 bg-gray p-xl-4">
+    <div class="container-xxl radius shadow-sm bg-white h-100">
+      <div class="row h-100">
+        <div class="col-12 col-xl-4 sidebar d-block d-flex flex-column-reverse d-xl-block border-right h-100">
+          <div class="row radius-none radius-left-top-xl bg-primary">
+            <div class="col p-0">
+              <ul class="nav m-3 d-flex align-items-center" id="myTab" role="tablist">
+                <li class="me-auto me-xl-0"><img class="filter-white" src="images/sprite.svg#logo" alt="hexlet logo" width="25px" height="25px"></li>
+                <li class="nav-item px-2 small" role="presentation">
+                  <button class="nav-button active" id="contacts" data-bs-toggle="tab" data-bs-target="#contacts-tab-pane" type="button" role="tab" aria-controls="contacts-tab-pane" aria-selected="true"><img class="filter-light mx-2" src="images/sprite.svg#people" alt="contacts image" width="25px" height="35px">
+                    <p class="d-none d-xl-block m-0">Контакты</p>
+                  </button>
+                </li>
+                <li class="nav-item px-2 small" role="presentation">
+                  <button class="nav-button" id="chat" data-bs-toggle="tab" data-bs-target="#chat-tab-pane" type="button" role="tab" aria-controls="chat-tab-pane" aria-selected="true"><img class="filter-light mx-2" src="images/sprite.svg#chat" alt="chat image" width="25px" height="35px">
+                    <p class="d-none d-xl-block m-0">Сообщения</p>
+                  </button>
+                </li>
+                <li class="nav-item px-2 small" role="presentation">
+                  <button class="nav-button" id="profile" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true">   <img class="filter-light mx-2" src="images/sprite.svg#person" alt="profile image" width="25px" height="35px">
+                    <p class="d-none d-xl-block m-0">Профиль</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col pt-5 px-4">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="contacts-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                  <h2 class="fw-bold mb-4">Контакты</h2>
+                                    <form class="mb-5" action="">
+                                      <input class="p-4 search-input border-bottom" placeholder="Поиск по контактам" id="search" type="search">
+                                    </form>
+                  <div class="mb-5">
+                    <p class="text-muted">A</p><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_3.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4">
+                        <p class="m-0 fw-bold">Алексей Примадонин</p>
+                        <p class="m-0 small sidebar-card-subtext">Онлайн</p>
+                      </div></a>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-muted">В</p><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4">
+                        <p class="m-0 fw-bold">Вениамин Редакторович</p>
+                        <p class="m-0 small sidebar-card-subtext">Онлайн</p>
+                      </div></a>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-muted">Д</p><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_2.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4">
+                        <p class="m-0 fw-bold">Джедай Падаванов</p>
+                        <p class="m-0 small sidebar-card-subtext">Был онлайн вчера</p>
+                      </div></a>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-muted">К</p><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_1.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4">
+                        <p class="m-0 fw-bold">Кодовёнок Хекслетович</p>
+                        <p class="m-0 small sidebar-card-subtext">Был онлайн 3 часа назад</p>
+                      </div></a><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_5.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4">
+                        <p class="m-0 fw-bold">Королева Верстальщина</p>
+                        <p class="m-0 small sidebar-card-subtext">Была онлайн вчера</p>
+                      </div></a>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-muted">П</p><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_6.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4">
+                        <p class="m-0 fw-bold">Питонист Джангович</p>
+                        <p class="m-0 small sidebar-card-subtext">Был онлайн вчера</p>
+                      </div></a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="chat-tab-pane" role="tabpanel" aria-labelledby="chat-tab" tabindex="0">
+                  <h2 class="fw-bold mb-4">Сообщения</h2>
+                                    <form class="mb-5" action="">
+                                      <input class="p-4 search-input border-bottom" placeholder="Поиск по сообщениям" id="search" type="search">
+                                    </form>
+                  <div class="mb-5"><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4 overflow-hidden">
+                        <div class="d-flex">
+                          <p class="m-0 fw-bold">Вениамин Редакторович</p>
+                          <p class="mb-0 sidebar-card-time">11:45</p>
+                        </div>
+                        <p class="m-0 small sidebar-card-subtext ellipsis">o_O</p>
+                      </div></a></div>
+                  <div class="mb-5"><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_2.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4 overflow-hidden">
+                        <div class="d-flex">
+                          <p class="m-0 fw-bold">Джедай Падаванов</p>
+                          <p class="mb-0 sidebar-card-time">10:12</p>
+                        </div>
+                        <p class="m-0 small sidebar-card-subtext ellipsis">Привет, скоро третий проект? Уже скоро надо будет выложить</p>
+                      </div></a></div>
+                  <div class="mb-5"><a class="sidebar-card mt-23 px-3 py-4 shadow-sm d-flex" href="#"><img class="round" src="/images/avatar_2.jpg" alt="user-avatar" width="50px" height="50px">
+                      <div class="mx-4 overflow-hidden">
+                        <div class="d-flex">
+                          <p class="m-0 fw-bold">Алексей Примадонин</p>
+                          <p class="mb-0 sidebar-card-time">08:53</p>
+                        </div>
+                        <p class="m-0 small sidebar-card-subtext ellipsis">Тесты упали &gt;_&lt;</p>
+                      </div></a></div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                  <h2 class="fw-bold mb-4">Профиль</h2>
+                                    <form class="mb-5" action="">
+                                      <input class="p-4 search-input border-bottom" placeholder="Поиск по сообщениям" id="search" type="search">
+                                    </form>
+                  <div class="card border-0 text-center mb-6"><img class="round mx-auto mb-2" src="images/avatar_1.jpg" alt="user avatar" width="90px" height="90px">
+                    <h6 class="card-title mb-4">Кодовёнок Хекслетович</h6>
+                    <div class="card-body py-0">
+                      <p class="card-text text-black-50">Милый и скромный помощник начинающих разработчиков. Люблю JavaScript</p>
+                    </div>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex align-items-center">
+                      <div class="small">
+                        <p class="m-0 text-black-50">Страна</p>
+                        <p class="m-0">Москва, Россия</p>
+                      </div><img class="ms-auto filter-grey" src="images/sprite.svg#country" width="20px" height="20px" alt="country image">
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <div class="small">
+                        <p class="m-0 text-black-50">Телефон</p>
+                        <p class="m-0">+7 (499) 123-45-67</p>
+                      </div><img class="ms-auto filter-grey" src="images/sprite.svg#phone" width="20px" height="20px" alt="phone image">
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <div class="small">
+                        <p class="m-0 text-black-50">Email</p>
+                        <p class="m-0">nikita.m@hexlet.io</p>
+                      </div><img class="ms-auto filter-grey" src="images/sprite.svg#email" width="20px" height="20px" alt="email image">
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                      <div class="small">
+                        <p class="m-0 text-black-50">Twitter</p>
+                        <p class="m-0">@n_mikhaylov</p>
+                      </div><img class="ms-auto filter-grey" src="images/sprite.svg#twitter" width="20px" height="20px" alt="twitter image">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 position-relative d-none d-xl-block">
+          <div class="centerized"><img class="round mb-23" src="images/avatar_1.jpg" alt="user avatar" width="200px" height="200px">
+            <h6 class="m-0">Привет, Кодовёнок</h6>
+            <p class="m-0 small text-secondary">Выбери чат, чтобы начать общаться</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</html>

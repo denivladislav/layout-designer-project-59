@@ -18,15 +18,15 @@ html(lang='ru')
 
     link(rel='stylesheet', href='../styles/app.css')
 
-  body
-    .container-xxl.vh-100.radius.shadow-sm
-      .row.vh-100
-        .col-12.col-xl-4.sidebar.d-block.d-xl-flex.flex-xl-column.border-right.vh-100
+  body.vh-100.bg-gray.p-xl-4
+    .container-xxl.radius.shadow-sm.bg-white.h-100
+      .row.h-100
+        .col-12.col-xl-4.sidebar.d-block.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
           .row.radius-none.radius-left-top-xl.bg-primary
             .col.p-0
-              ul.nav.m-4(id='myTab', role='tablist')
+              ul.nav.m-3.d-flex.align-items-center(id='myTab', role='tablist')
                 li.me-auto.me-xl-0
-                  img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25px', height='35px')
+                  img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25px', height='25px')
                 li.nav-item.px-2.small(role='presentation')
                   button.nav-button.active(id='contacts', data-bs-toggle='tab', data-bs-target='#contacts-tab-pane', type='button', role='tab', aria-controls='contacts-tab-pane', aria-selected='true')
                     img.filter-light.mx-2(src='images/sprite.svg#people', alt='contacts image', width='25px', height='35px')

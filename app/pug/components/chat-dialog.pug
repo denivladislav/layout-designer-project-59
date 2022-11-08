@@ -55,7 +55,7 @@
           p.mb-1.fw-bold= message.author
         p.mb-2(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.text
         p.m-0.pt-1.border-top.text-secondary.opacity-40(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.time
-form.mt-5.mx-5.border-top(action='')
+form.mt-6.mx-5.border-top(action='')
   .input-group.p-2.d-flex.align-items-center
     input.p-4.form-control.search-input(placeholder=componentData.searchPlaceholder, id='search', type='search')
     button.btn.bg-primary.round.p-0(type='submit', width='21px', height='21px')
