@@ -1,6 +1,6 @@
-@import '../../node_modules/bootstrap/scss/_utilities.scss';
-@import '../../node_modules/bootstrap/scss/_variables.scss';
-@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../node_modules/bootstrap/scss/_utilities";
+@import "../../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/_functions";
 
 $utilities: map-merge(
   $utilities,
@@ -89,10 +89,10 @@ $utilities: map-merge(
       property: opacity,
       values: (
         0: 0,
-        25: .25,
-        40: .40,
-        50: .5,
-        75: .75,
+        25: 0.25,
+        40: 0.4,
+        50: 0.5,
+        75: 0.75,
         100: 1,
       )
     ),
@@ -114,4 +114,4 @@ $utilities: map-merge(
   )
 );
 
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../../node_modules/bootstrap/scss/bootstrap";

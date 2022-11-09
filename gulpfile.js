@@ -27,7 +27,12 @@ const browserSyncJob = () => {
 
 const sassLintJob = () => {
   return src('./app/scss/**/*.scss')
-    .pipe(sassLint({ fix: true }));
+  .pipe(sassLint({
+    reporters: [
+      {formatter: 'string', console: true}
+    ],
+    fix: true,
+  }));
 }
 
 const pugLintJob = () => {

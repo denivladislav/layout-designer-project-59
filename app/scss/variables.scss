@@ -1,15 +1,14 @@
 $theme-colors: (
-  "gray": #EFEFEF,
-  "primary": #4545A5,
-  "secondary": #6C757D,
-  "success": #28A745,
-  "info": #17A2B8,
-  "warning": #FFC107,
-  "danger": #DC3545,
-  "light": #FBFBFB,
-  "dark": #343A40,
+  "gray": #efefef,
+  "primary": #4545a5,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #fbfbfb,
+  "dark": #343a40,
 );
-
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -18,7 +17,6 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1600px,
 );
-
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -26,12 +24,11 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1540px,
 );
-
 $spacer: 1rem;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
@@ -41,5 +38,4 @@ $spacers: (
   9: $spacer * 1.375,
   10: $spacer * 2,
 );
-
 $enable-shadows: true;

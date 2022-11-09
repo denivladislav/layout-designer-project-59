@@ -1,16 +1,16 @@
 .nav-button {
-  padding: 0;
   display: flex;
   align-items: center;
+  padding: 0;
+  color: map-get($theme-colors, "light");
   background: none;
   border: none;
-  color: map-get($theme-colors, "light");
 }
 
 .search-input {
   width: 100%;
-  outline: none;
   border: none;
+  outline: none;
   box-shadow: none;
 }
 
@@ -20,9 +20,9 @@
 
 .sidebar-card {
   position: relative;
+  color: map-get($theme-colors, "dark");
 
   text-decoration: none;
-  color: map-get($theme-colors, "dark");
 
   & .sidebar-card-subtext {
     color: map-get($theme-colors, "secondary");
