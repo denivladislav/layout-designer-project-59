@@ -13,18 +13,18 @@ html(lang='ru')
   body.vh-100.bg-gray.p-xl-4
     .container-xxl.radius.shadow-sm.bg-white.h-100
       .row.h-100
-        .col-12.col-xl-4.d-block.no-scroll-overflow.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
+        .col-12.col-xl-4.no-scroll-overflow.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
           .row.radius-none.radius-left-top-xl.bg-primary
             .col.p-0
               include components/nav.pug
           .row.no-scroll-overflow.mb-auto
-            .col.pt-5.px-4
-              .tab-content(id='myTabContent')
-                .tab-pane.fade.show.active(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0')
+            .col.p-0
+              .tab-content(id='tabContent')
+                .tab-pane.pt-5.px-4.fade.show.active(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0')
                   include components/contacts.pug
-                .tab-pane.fade(id='chat-tab-pane', role='tabpanel', aria-labelledby='chat-tab', tabindex='0')
+                .tab-pane.pt-5.px-4.fade(id='chat-tab-pane', role='tabpanel', aria-labelledby='chat-tab', tabindex='0')
                   include components/chat-messages.pug
-                .tab-pane.fade(id='profile-tab-pane', role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+                .tab-pane.pt-5.px-4.fade(id='profile-tab-pane', role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
                   include components/profile.pug
         .col-8.position-relative.d-none.d-xl-block
           include components/chat-greeting.pug

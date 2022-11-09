@@ -1,6 +1,10 @@
 ul.nav.p-3.d-flex.align-items-center(id='tab', role='tablist')
   li.me-auto.me-xl-0
     img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25px', height='25px')
+  li.ms-4.nav-item.small.d-xl-none(role='presentation')
+    button.nav-button(id='current-chat', data-bs-toggle='tab', data-bs-target='#current-chat-tab-pane', type='button', role='tab', aria-controls='current-chat-tab-pane', aria-selected='true')
+      img.filter-light.me-2(src='images/sprite.svg#chat-left-text', alt='current-chat image', width='30px', height='40px')
+      p.d-none.d-xl-block.m-0 Диалог
   li.ms-4.nav-item.small(role='presentation')
     button.nav-button.active(id='contacts', data-bs-toggle='tab', data-bs-target='#contacts-tab-pane', type='button', role='tab', aria-controls='contacts-tab-pane', aria-selected='true')
       img.filter-light.me-2(src='images/sprite.svg#people', alt='contacts image', width='30px', height='40px')

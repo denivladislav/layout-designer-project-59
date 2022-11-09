@@ -13,20 +13,22 @@ html(lang='ru')
   body.vh-100.bg-gray.p-xl-4
     .container-xxl.radius.shadow-sm.bg-white.h-100
       .row.h-100
-        .col-12.col-xl-4.no-scroll-overflow.d-block.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
+        .col-12.col-xl-4.no-scroll-overflow.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
           .row.radius-none.radius-left-top-xl.bg-primary
             .col.p-0
-              include components/nav.pug
+              include components/chat-nav.pug
           .row.no-scroll-overflow.mb-auto
-            .col.pt-5.px-4
-              .tab-content(id='myTabContent')
-                .tab-pane.fade(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0')
+            .col.p-0
+              .tab-content(id='tabContent')
+                .tab-pane.fade.d-xl-none(id='current-chat-tab-pane', role='tabpanel', aria-labelledby='#current-chat-tab', tabindex='0')
+                  include components/chat-current-chat.pug
+                .tab-pane.fade.pt-5.px-4(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0')
                   include components/contacts.pug
-                .tab-pane.fade.show.active(id='chat-tab-pane', role='tabpanel', aria-labelledby='chat-tab', tabindex='0')
+                .tab-pane.fade.pt-5.px-4.show.active(id='chat-tab-pane', role='tabpanel', aria-labelledby='chat-tab', tabindex='0')
                   include components/chat-messages.pug
-                .tab-pane.fade(id='profile-tab-pane', role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+                .tab-pane.fade.pt-5.px-4(id='profile-tab-pane', role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
                   include components/profile.pug
-        .col-8.p-0.h-100.no-scroll-overflow
-          include components/chat-dialog.pug
+        .col-8.p-0.h-100.d-none.d-xl-block.no-scroll-overflow
+          include components/chat-current-chat.pug
 
   script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js', integrity='sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk', crossorigin='anonymous')
