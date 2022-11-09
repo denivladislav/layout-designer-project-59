@@ -14,29 +14,19 @@
         <div class="col-12 col-xl-4 no-scroll-overflow d-flex flex-column-reverse d-xl-block border-right h-100">
           <div class="row radius-none radius-left-top-xl bg-primary">
             <div class="col p-0">
-              <ul class="nav p-3 d-flex align-items-center" id="tab" role="tablist">
-                <li class="me-auto me-xl-0"><img class="filter-white" src="images/sprite.svg#logo" alt="hexlet logo" width="25px" height="25px"></li>
-                <li class="ms-4 nav-item small d-xl-none" role="presentation">
-                  <button class="nav-button" id="current-chat" data-bs-toggle="tab" data-bs-target="#current-chat-tab-pane" type="button" role="tab" aria-controls="current-chat-tab-pane" aria-selected="true"><img class="filter-light me-2" src="images/sprite.svg#chat-left-text" alt="current-chat image" width="30px" height="40px">
-                    <p class="d-none d-xl-block m-0">Диалог</p>
-                  </button>
-                </li>
-                <li class="ms-4 nav-item small" role="presentation">
-                  <button class="nav-button active" id="contacts" data-bs-toggle="tab" data-bs-target="#contacts-tab-pane" type="button" role="tab" aria-controls="contacts-tab-pane" aria-selected="true"><img class="filter-light me-2" src="images/sprite.svg#people" alt="contacts image" width="30px" height="40px">
-                    <p class="d-none d-xl-block m-0">Контакты</p>
-                  </button>
-                </li>
-                <li class="ms-4 nav-item small" role="presentation">
-                  <button class="nav-button" id="chat" data-bs-toggle="tab" data-bs-target="#chat-tab-pane" type="button" role="tab" aria-controls="chat-tab-pane" aria-selected="true"><img class="filter-light me-1" src="images/sprite.svg#chat" alt="chat image" width="40px" height="40px">
-                    <p class="d-none d-xl-block m-0">Сообщения</p>
-                  </button>
-                </li>
-                <li class="ms-4 nav-item small" role="presentation">
-                  <button class="nav-button" id="profile" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true">   <img class="filter-light me-2" src="images/sprite.svg#person" alt="profile image" width="25px" height="40px">
-                    <p class="d-none d-xl-block m-0">Профиль</p>
-                  </button>
-                </li>
-              </ul>
+              <nav>
+                <ul class="nav px-3 py-3 p-xl-3 d-flex align-items-center" id="tab" role="tablist">
+                  <li class="me-auto me-xl-0"><img class="filter-white" src="images/sprite.svg#logo" alt="hexlet logo" width="25px" height="25px"></li>
+                  <li class="ms-4 nav-item small d-xl-none" role="presentation"><a class="p-0 d-flex align-items-center text-light nav-link" href="#current-chat" id="current-chat" data-bs-toggle="tab" data-bs-target="#current-chat-tab-pane" type="button" role="tab" aria-controls="current-chat-tab-pane"><img class="filter-light me-3 me-xl-2" src="images/sprite.svg#chat-left-text" alt="current-chat image" width="30px" height="40px">
+                      <p class="d-none d-xl-block m-0">Диалог</p></a></li>
+                  <li class="ms-4 nav-item small" role="presentation"><a class="p-0 d-flex align-items-center text-light nav-link active" href="#contacts" id="contacts" data-bs-toggle="tab" data-bs-target="#contacts-tab-pane" type="button" role="tab" aria-controls="contacts-tab-pane"><img class="filter-light me-xl-2" src="images/sprite.svg#people" alt="contacts image" width="30px" height="40px">
+                      <p class="d-none d-xl-block m-0">Контакты</p></a></li>
+                  <li class="ms-4 nav-item small" role="presentation"><a class="p-0 d-flex align-items-center text-light nav-link" href="#chats" id="chat" data-bs-toggle="tab" data-bs-target="#chat-tab-pane" type="button" role="tab" aria-controls="chat-tab-pane"><img class="filter-light me-2 me-xl-1" src="images/sprite.svg#chat" alt="chat image" width="40px" height="40px">
+                      <p class="d-none d-xl-block m-0">Сообщения</p></a></li>
+                  <li class="ms-4 nav-item small" role="presentation"><a class="p-0 d-flex align-items-center text-light nav-link" href="#profile" id="profile" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane">   <img class="filter-light me-4 me-xl-2" src="images/sprite.svg#person" alt="profile image" width="25px" height="40px">
+                      <p class="d-none d-xl-block m-0">Профиль</p></a></li>
+                </ul>
+              </nav>
             </div>
           </div>
           <div class="row no-scroll-overflow mb-auto">
@@ -52,43 +42,43 @@
                     </div>
                     <div class="p-5 h-100 no-scroll-overflow">
                       <div class="d-flex align-items-end mb-3"><img class="d-none d-xl-block me-3 round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
-                        <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-light">
+                        <div class="radius shadow-sm max-width-message-text p-4 bg-light">
                           <p class="mb-1 fw-bold">Вениамин Редакторович</p>
                           <p class="mb-2 text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
-                          <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-secondary">8 минут назад</p>
+                          <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-secondary">8 минут назад</p>
                         </div>
                       </div>
                       <div class="d-flex align-items-end mb-3 justify-content-end"><img class="d-none d-xl-block me-3 round" src="/images/avatar_1.jpg" alt="user-avatar" width="50px" height="50px">
-                        <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-primary">
+                        <div class="radius shadow-sm max-width-message-text p-4 bg-primary">
                           <p class="mb-2 text-light">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
-                          <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-light">8 минут назад</p>
+                          <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-light">8 минут назад</p>
                         </div>
                       </div>
                       <div class="d-flex align-items-end mb-3"><img class="d-none d-xl-block me-3 round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
-                        <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-light">
+                        <div class="radius shadow-sm max-width-message-text p-4 bg-light">
                           <p class="mb-1 fw-bold">Вениамин Редакторович</p>
                           <p class="mb-2 text-secondary">Лады</p>
-                          <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-secondary">5 минут назад</p>
+                          <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-secondary">5 минут назад</p>
                         </div>
                       </div>
                       <div class="d-flex align-items-end mb-3 justify-content-end"><img class="d-none d-xl-block me-3 round" src="/images/avatar_1.jpg" alt="user-avatar" width="50px" height="50px">
-                        <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-primary">
+                        <div class="radius shadow-sm max-width-message-text p-4 bg-primary">
                           <p class="mb-2 text-light">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
-                          <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-light">3 минут назад</p>
+                          <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-light">3 минут назад</p>
                         </div>
                       </div>
                       <div class="d-flex align-items-end mb-3"><img class="d-none d-xl-block me-3 round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
-                        <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-light">
+                        <div class="radius shadow-sm max-width-message-text p-4 bg-light">
                           <p class="mb-1 fw-bold">Вениамин Редакторович</p>
                           <p class="mb-2 text-secondary">о_О</p>
-                          <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-secondary">Только что</p>
+                          <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-secondary">Только что</p>
                         </div>
                       </div>
                     </div>
-                    <form class="mx-xl-5 border-top sticky-bottom bg-white" action="">
-                      <div class="input-group d-flex align-items-center">
-                        <input class="px-4 p-10 form-control search-input" placeholder="Напишите сообщение..." id="search" type="search">
-                        <button class="btn bg-primary round p-0" type="submit" width="21px" height="21px"><img class="filter-light" src="images/sprite.svg#cursor" alt="submit message" width="50px" height="50px"></button>
+                    <form class="ps-2 pe-3 px-xl-0 mx-xl-5 border-top sticky-bottom bg-white" action="">
+                      <div class="input-group d-flex align-items-baseline">
+                        <input class="p-4 py-xl-10 ps-xl-4 form-control search-input" placeholder="Напишите сообщение..." id="search" type="search">
+                        <button class="btn bg-primary round p-0 p-xl-1 me-xl-4" type="submit"><img class="filter-light" src="images/sprite.svg#cursor" alt="submit message" width="42px" height="42px"></button>
                       </div>
                     </form>
                   </div>
@@ -173,8 +163,8 @@
                                     <form class="mb-5" action="">
                                       <input class="p-4 search-input border-bottom" placeholder="Поиск по сообщениям" id="search" type="search">
                                     </form>
-                  <div class="card border-0 text-center mb-6"><img class="round mx-auto mb-2" src="images/avatar_1.jpg" alt="user avatar" width="90px" height="90px">
-                    <h6 class="card-title mb-4">Кодовёнок Хекслетович</h6>
+                  <div class="card border-0 text-center my-6"><img class="round mx-auto mb-2" src="images/avatar_1.jpg" alt="user avatar" width="90px" height="90px">
+                    <h6 class="fw-bold card-title mb-4">Кодовёнок Хекслетович</h6>
                     <div class="card-body py-0">
                       <p class="card-text text-black-50">Милый и скромный помощник начинающих разработчиков. Люблю JavaScript</p>
                     </div>
@@ -220,43 +210,43 @@
             </div>
             <div class="p-5 h-100 no-scroll-overflow">
               <div class="d-flex align-items-end mb-3"><img class="d-none d-xl-block me-3 round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
-                <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-light">
+                <div class="radius shadow-sm max-width-message-text p-4 bg-light">
                   <p class="mb-1 fw-bold">Вениамин Редакторович</p>
                   <p class="mb-2 text-secondary">Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?</p>
-                  <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-secondary">8 минут назад</p>
+                  <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-secondary">8 минут назад</p>
                 </div>
               </div>
               <div class="d-flex align-items-end mb-3 justify-content-end"><img class="d-none d-xl-block me-3 round" src="/images/avatar_1.jpg" alt="user-avatar" width="50px" height="50px">
-                <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-primary">
+                <div class="radius shadow-sm max-width-message-text p-4 bg-primary">
                   <p class="mb-2 text-light">Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень</p>
-                  <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-light">8 минут назад</p>
+                  <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-light">8 минут назад</p>
                 </div>
               </div>
               <div class="d-flex align-items-end mb-3"><img class="d-none d-xl-block me-3 round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
-                <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-light">
+                <div class="radius shadow-sm max-width-message-text p-4 bg-light">
                   <p class="mb-1 fw-bold">Вениамин Редакторович</p>
                   <p class="mb-2 text-secondary">Лады</p>
-                  <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-secondary">5 минут назад</p>
+                  <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-secondary">5 минут назад</p>
                 </div>
               </div>
               <div class="d-flex align-items-end mb-3 justify-content-end"><img class="d-none d-xl-block me-3 round" src="/images/avatar_1.jpg" alt="user-avatar" width="50px" height="50px">
-                <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-primary">
+                <div class="radius shadow-sm max-width-message-text p-4 bg-primary">
                   <p class="mb-2 text-light">А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие</p>
-                  <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-light">3 минут назад</p>
+                  <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-light">3 минут назад</p>
                 </div>
               </div>
               <div class="d-flex align-items-end mb-3"><img class="d-none d-xl-block me-3 round" src="/images/avatar_4.jpg" alt="user-avatar" width="50px" height="50px">
-                <div class="radius shadow-sm max-width-message-text px-4 py-9 bg-light">
+                <div class="radius shadow-sm max-width-message-text p-4 bg-light">
                   <p class="mb-1 fw-bold">Вениамин Редакторович</p>
                   <p class="mb-2 text-secondary">о_О</p>
-                  <p class="d-none d-xl-block m-0 pt-1 border-top text-secondary opacity-40 text-secondary">Только что</p>
+                  <p class="m-0 pt-1 border-top small text-secondary opacity-40 text-secondary">Только что</p>
                 </div>
               </div>
             </div>
-            <form class="mx-xl-5 border-top sticky-bottom bg-white" action="">
-              <div class="input-group d-flex align-items-center">
-                <input class="px-4 p-10 form-control search-input" placeholder="Напишите сообщение..." id="search" type="search">
-                <button class="btn bg-primary round p-0" type="submit" width="21px" height="21px"><img class="filter-light" src="images/sprite.svg#cursor" alt="submit message" width="50px" height="50px"></button>
+            <form class="ps-2 pe-3 px-xl-0 mx-xl-5 border-top sticky-bottom bg-white" action="">
+              <div class="input-group d-flex align-items-baseline">
+                <input class="p-4 py-xl-10 ps-xl-4 form-control search-input" placeholder="Напишите сообщение..." id="search" type="search">
+                <button class="btn bg-primary round p-0 p-xl-1 me-xl-4" type="submit"><img class="filter-light" src="images/sprite.svg#cursor" alt="submit message" width="42px" height="42px"></button>
               </div>
             </form>
           </div>

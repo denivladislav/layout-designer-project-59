@@ -22,9 +22,9 @@ include search-form.pug
 
 h2.fw-bold.mb-4 Профиль
 +search-form("Поиск по сообщениям")
-.card.border-0.text-center.mb-6
+.card.border-0.text-center.my-6
   img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90px', height='90px')
-  h6.card-title.mb-4= userdata.name
+  h6.fw-bold.card-title.mb-4= userdata.name
   .card-body.py-0
     p.card-text.text-black-50= userdata.text
 ul.list-group.list-group-flush
