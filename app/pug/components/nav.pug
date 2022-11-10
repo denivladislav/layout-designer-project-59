@@ -3,7 +3,8 @@ mixin nav(activePage)
   nav
     ul.nav.px-3.py-3.p-xl-3.d-flex.align-items-center(id='tab', role='tablist')
       li.me-auto.me-xl-0
-        img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25', height='25')
+        a.p-0.d-flex.align-items-center.text-light.nav-link(href='#', id='main')
+          img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25', height='25')
       if isChatActive
         li.ms-4.nav-item.small.d-xl-none(role='presentation')
           a.p-0.d-flex.align-items-center.text-light.nav-link(href='#current-chat', id='current-chat', data-bs-toggle='tab', data-bs-target='#current-chat-tab-pane', role='tab', aria-controls='current-chat-tab-pane')
