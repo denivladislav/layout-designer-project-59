@@ -1,3 +1,6 @@
+include components/nav.pug
+include components/tabs.pug
+
 doctype html
 html(lang='ru')
   head
@@ -16,16 +19,10 @@ html(lang='ru')
         .col-12.col-xl-4.no-scroll-overflow.d-flex.flex-column-reverse.d-xl-block.border-right.h-100
           .row.radius-none.radius-left-top-xl.bg-primary
             .col.p-0
-              include components/nav.pug
+              +nav('index')
           .row.no-scroll-overflow.mb-auto
             .col.p-0
-              .tab-content(id='tabContent')
-                .tab-pane.pt-5.px-4.fade.show.active(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0')
-                  include components/contacts.pug
-                .tab-pane.pt-5.px-4.fade(id='chat-tab-pane', role='tabpanel', aria-labelledby='chat-tab', tabindex='0')
-                  include components/chat-messages.pug
-                .tab-pane.pt-5.px-4.fade(id='profile-tab-pane', role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
-                  include components/profile.pug
+              +tabs('index')
         .col-8.position-relative.d-none.d-xl-block
           include components/chat-greeting.pug
 
