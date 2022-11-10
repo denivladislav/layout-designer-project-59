@@ -1,5 +1,6 @@
 include components/nav.pug
 include components/tabs.pug
+include components/chat-current-chat.pug
 
 doctype html
 html(lang='ru')
@@ -13,6 +14,8 @@ html(lang='ru')
 
     link(rel='stylesheet', href='../styles/app.css')
 
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js', integrity='sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk', crossorigin='anonymous')
+
   body.vh-100.bg-gray.p-xl-4
     .container-xxl.radius.shadow-sm.bg-white.h-100
       .row.h-100
@@ -24,6 +27,4 @@ html(lang='ru')
             .col.p-0
               +tabs('chat')
         .col-8.p-0.h-100.d-none.d-xl-block.no-scroll-overflow
-          include components/chat-current-chat.pug
-
-  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js', integrity='sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk', crossorigin='anonymous')
+          +chat-current-chat('message-input')

@@ -1,12 +1,14 @@
+include chat-current-chat.pug
+
 mixin tabs(activePage)
   - var isChatActive = activePage === 'chat'
   .tab-content(id='tabContent')
     if (isChatActive)
-      .tab-pane.fade.d-xl-none(id='current-chat-tab-pane', role='tabpanel', aria-labelledby='#current-chat-tab', tabindex='0')
-        include chat-current-chat.pug
-    .tab-pane.fade.pt-5.px-4(id='contacts-tab-pane', role='tabpanel', aria-labelledby='contact-tab', tabindex='0', class={'active': !isChatActive, 'show': !isChatActive})
+      .tab-pane.fade.d-xl-none(id='current-chat-tab-pane', role='tabpanel', aria-label='#current-chat-tab', tabindex='0')
+        +chat-current-chat('tab-message-input')
+    .tab-pane.fade.pt-5.px-4(id='contacts-tab-pane', role='tabpanel', aria-label='contact-tab', tabindex='0', class={'active': !isChatActive, 'show': !isChatActive})
       include contacts.pug
-    .tab-pane.fade.pt-5.px-4(id='chat-tab-pane', role='tabpanel', aria-labelledby='chat-tab', tabindex='0', class={'active': isChatActive, 'show': isChatActive})
+    .tab-pane.fade.pt-5.px-4(id='chat-tab-pane', role='tabpanel', aria-label='chat-tab', tabindex='0', class={'active': isChatActive, 'show': isChatActive})
       include chat-messages.pug
-    .tab-pane.fade.pt-5.px-4(id='profile-tab-pane', role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+    .tab-pane.fade.pt-5.px-4(id='profile-tab-pane', role='tabpanel', aria-label='profile-tab', tabindex='0')
       include profile.pug

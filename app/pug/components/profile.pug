@@ -21,9 +21,9 @@
 include search-form.pug
 
 h2.fw-bold.mb-4 Профиль
-+search-form("Поиск по сообщениям")
++search-form("Поиск по сообщениям", 'search-profile')
 .card.border-0.text-center.my-6
-  img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90px', height='90px')
+  img.round.mx-auto.mb-2(src='images/avatar_1.jpg', alt='user avatar', width='90', height='90')
   h6.fw-bold.card-title.mb-4= userdata.name
   .card-body.py-0
     p.card-text.text-black-50= userdata.text
@@ -33,4 +33,4 @@ ul.list-group.list-group-flush.mb-4
       .small
         p.m-0.text-black-50= value
         p.m-0= userdata[key]
-      img.ms-auto.filter-grey(src=`images/sprite.svg#${key}`, width='20px', height='20px', alt=`${key} image`)
+      img.ms-auto.filter-grey(src=`images/sprite.svg#${key}`, width='20', height='20', alt=`${key} image`)

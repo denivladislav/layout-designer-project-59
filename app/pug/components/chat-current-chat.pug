@@ -39,23 +39,24 @@
     ],
   }
 
-.me-xl-4.px-3.py-9.d-flex.border-bottom.sticky-top.bg-white
-  img.round(src=componentData.user.avatar, alt='user-avatar', width='50px', height='50px')
-  .mx-4
-    p.m-0.fw-bold= componentData.user.name
-    p.m-0.small.sidebar-card-subtext= componentData.user.status
-.p-5.h-100.no-scroll-overflow
-  each message in componentData.messages
-    - var isMessageOwn = message.author === 'self'
-    .d-flex.align-items-end.mb-3(class={"justify-content-end": isMessageOwn})
-      img.d-none.d-xl-block.me-3.round(src=message.avatar, alt='user-avatar', width='50px', height='50px')
-      .radius.shadow-sm.max-width-message-text.p-4(class={'bg-primary': isMessageOwn, 'bg-light': !isMessageOwn})
-        if !isMessageOwn
-          p.mb-1.fw-bold= message.author
-        p.mb-2(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.text
-        p.m-0.pt-1.border-top.small.text-secondary.opacity-40(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.time
-form.ps-2.pe-3.px-xl-0.mx-xl-5.border-top.sticky-bottom.bg-white(action='')
-  .input-group.d-flex.align-items-baseline
-    input.p-4.py-xl-10.ps-xl-4.form-control.search-input(placeholder='Напишите сообщение...', id='search', type='search')
-    button.btn.bg-primary.round.p-0.p-xl-1.me-xl-4(type='submit')
-      img.filter-light(src='images/sprite.svg#cursor', alt='submit message', width='42px', height='42px')
+mixin chat-current-chat(inputId)
+  .me-xl-4.px-3.py-9.d-flex.border-bottom.sticky-top.bg-white
+    img.round(src=componentData.user.avatar, alt='user-avatar', width='50', height='50')
+    .mx-4
+      p.m-0.fw-bold= componentData.user.name
+      p.m-0.small.sidebar-card-subtext= componentData.user.status
+  .p-5.h-100.no-scroll-overflow
+    each message in componentData.messages
+      - var isMessageOwn = message.author === 'self'
+      .d-flex.align-items-end.mb-3(class={"justify-content-end": isMessageOwn})
+        img.d-none.d-xl-block.me-3.round(src=message.avatar, alt='user-avatar', width='50', height='50')
+        .radius.shadow-sm.max-width-message-text.p-4(class={'bg-primary': isMessageOwn, 'bg-light': !isMessageOwn})
+          if !isMessageOwn
+            p.mb-1.fw-bold= message.author
+          p.mb-2(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.text
+          p.m-0.pt-1.border-top.small.text-secondary.opacity-40(class={'text-light': isMessageOwn, 'text-secondary': !isMessageOwn})= message.time
+  form.ps-2.pe-3.px-xl-0.mx-xl-5.border-top.sticky-bottom.bg-white(action='/')
+    .input-group.d-flex.align-items-baseline
+      input.p-4.py-xl-10.ps-xl-4.form-control.search-input(placeholder='Напишите сообщение...', id=inputId, type='text')
+      button.btn.bg-primary.round.p-0.p-xl-1.me-xl-4(type='submit')
+        img.filter-light(src='images/sprite.svg#cursor', alt='submit message', width='42', height='42')
