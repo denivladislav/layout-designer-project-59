@@ -1,3 +1,5 @@
+include search-form.pug
+
 -
   var contacts = {
     "A": [{
@@ -35,8 +37,6 @@
       avatar: "/images/avatar_6.jpg"
     }],
   }
-
-include search-form.pug
 
 h2.fw-bold.mb-4 Контакты
 +search-form("Поиск по контактам", 'search-contacts')

@@ -1,3 +1,5 @@
+include icon.pug
+
 -
   var componentData = {
     user: {
@@ -59,4 +61,4 @@ mixin chat-current-chat(inputId)
     .input-group.d-flex.align-items-baseline
       input.p-4.py-xl-10.ps-xl-4.form-control.search-input(placeholder='Напишите сообщение...', id=inputId, type='text')
       button.btn.bg-primary.round.p-0.p-xl-1.me-xl-4(type='submit')
-        img.filter-light(src='images/sprite.svg#cursor', alt='submit message', width='42', height='42')
+        +icon('cursor', 'submit message', '42', '42').filter-light

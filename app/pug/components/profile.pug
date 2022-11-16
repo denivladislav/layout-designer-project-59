@@ -1,3 +1,6 @@
+include icon.pug
+include search-form.pug
+
 -
   var userdata = {
     name: 'Кодовёнок Хекслетович',
@@ -18,8 +21,6 @@
     }
   }
 
-include search-form.pug
-
 h2.fw-bold.mb-4 Профиль
 +search-form("Поиск по сообщениям", 'search-profile')
 .card.border-0.text-center.my-6
@@ -33,4 +34,4 @@ ul.list-group.list-group-flush.mb-4
       .small
         p.m-0.text-black-50= value
         p.m-0= userdata[key]
-      img.ms-auto.filter-grey(src=`images/sprite.svg#${key}`, width='20', height='20', alt=`${key} image`)
+      +icon(`${key}`, `${key} image`, '20', '20').ms-auto.filter-grey

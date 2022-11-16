@@ -1,24 +1,26 @@
+include icon.pug
+
 mixin nav(activePage)
   - var isChatActive = activePage === 'chat'
   nav
     ul.nav.px-3.py-3.p-xl-3.d-flex.align-items-center(id='tab', role='tablist')
       li.me-auto.me-xl-0
         a.p-0.d-flex.align-items-center.text-light.nav-link(href='#', id='main')
-          img.filter-white(src='images/sprite.svg#logo', alt='hexlet logo', width='25', height='25')
+          +icon('logo', 'hexlet logo', '25', '25').filter-white
       if isChatActive
         li.ms-4.nav-item.small.d-xl-none(role='presentation')
           a.p-0.d-flex.align-items-center.text-light.nav-link(href='#current-chat', id='current-chat', data-bs-toggle='tab', data-bs-target='#current-chat-tab-pane', role='tab', aria-controls='current-chat-tab-pane')
-            img.filter-light.me-3.me-xl-2(src='images/sprite.svg#chat-left-text', alt='current-chat image', width='30', height='40')
+            +icon('chat-left-text', 'current-chat image', '25', '25').filter-white.me-3.me-xl-2
             p.d-none.d-xl-block.m-0 Диалог
       li.ms-4.nav-item.small(role='presentation')
         a.p-0.d-flex.align-items-center.text-light.nav-link(href='#contacts', id='contacts', data-bs-toggle='tab', data-bs-target='#contacts-tab-pane', role='tab', aria-controls='contacts-tab-pane', class={'active': !isChatActive})
-          img.filter-light.me-xl-2(src='images/sprite.svg#people', alt='contacts image', width='30', height='40')
+          +icon('people', 'contacts image', '30', '40').filter-light.me-xl-2
           p.d-none.d-xl-block.m-0 Контакты
       li.ms-4.nav-item.small(role='presentation')
         a.p-0.d-flex.align-items-center.text-light.nav-link(href='#chats', id='chat', data-bs-toggle='tab', data-bs-target='#chat-tab-pane', role='tab', aria-controls='chat-tab-pane', class={'active': isChatActive})
-          img.filter-light.me-2.me-xl-1(src='images/sprite.svg#chat', alt='chat image', width='40', height='40')
+          +icon('chat', 'chat image', '40', '40').filter-light.me-2.me-xl-1
           p.d-none.d-xl-block.m-0 Сообщения
       li.ms-4.nav-item.small(role='presentation')
         a.p-0.d-flex.align-items-center.text-light.nav-link(href='#profile', id='profile', data-bs-toggle='tab', data-bs-target='#profile-tab-pane', role='tab', aria-controls='profile-tab-pane')    
-          img.filter-light.me-4.me-xl-2(src='images/sprite.svg#person', alt='profile image', width='25', height='40')
+          +icon('person', 'profile image', '25', '40').filter-light.me-4.me-xl-2
           p.d-none.d-xl-block.m-0 Профиль

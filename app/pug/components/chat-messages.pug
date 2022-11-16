@@ -1,3 +1,5 @@
+include search-form.pug
+
 -
   var messages = [
     {
@@ -19,8 +21,6 @@
       time: "08:53"
     },
   ]
-
-include search-form.pug
 
 h2.fw-bold.mb-4 Чаты
 +search-form("Поиск по сообщениям", 'search-messages')
