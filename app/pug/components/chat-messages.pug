@@ -22,14 +22,15 @@ include search-form.pug
     },
   ]
 
-h2.fw-bold.mb-4 Чаты
-+search-form("Поиск по сообщениям", 'search-messages')
-each message in messages
-  .mb-3
-    a.sidebar-card.mt-7.px-3.py-9.shadow-sm.d-flex(href='#')
-      img.round(src=message.avatar, alt='user-avatar', width='50', height='50')
-      .mx-4.overflow-hidden
-        .d-flex.align-items-center
-          p.m-0.fw-bold= message.author
-          p.mb-0.pe-2.small.sidebar-card-time= message.time
-        p.m-0.small.sidebar-card-subtext.ellipsis= message.text
+mixin chat-messages()
+  h2.fw-bold.mb-4 Чаты
+  +search-form("Поиск по сообщениям", 'search-messages')
+  each message in messages
+    .mb-3
+      a.sidebar-card.mt-7.px-3.py-9.shadow-sm.d-flex(href='#')
+        img.round(src=message.avatar, alt='user-avatar', width='50', height='50')
+        .mx-4.overflow-hidden
+          .d-flex.align-items-center
+            p.m-0.fw-bold= message.author
+            p.mb-0.pe-2.small.sidebar-card-time= message.time
+          p.m-0.small.sidebar-card-subtext.ellipsis= message.text

@@ -1,4 +1,7 @@
 include chat-current-chat.pug
+include contacts.pug
+include chat-messages.pug
+include profile.pug
 
 mixin tabs(activePage)
   - var isChatActive = activePage === 'chat'
@@ -7,8 +10,8 @@ mixin tabs(activePage)
       .tab-pane.fade.d-xl-none(id='current-chat-tab-pane', role='tabpanel', aria-label='#current-chat-tab', tabindex='0')
         +chat-current-chat('tab-message-input')
     .tab-pane.fade.pt-5.px-4(id='contacts-tab-pane', role='tabpanel', aria-label='contact-tab', tabindex='0', class={'active': !isChatActive, 'show': !isChatActive})
-      include contacts.pug
+      +contacts()
     .tab-pane.fade.pt-5.px-4(id='chat-tab-pane', role='tabpanel', aria-label='chat-tab', tabindex='0', class={'active': isChatActive, 'show': isChatActive})
-      include chat-messages.pug
+      +chat-messages()
     .tab-pane.fade.pt-5.px-4(id='profile-tab-pane', role='tabpanel', aria-label='profile-tab', tabindex='0')
-      include profile.pug
+      +profile()
