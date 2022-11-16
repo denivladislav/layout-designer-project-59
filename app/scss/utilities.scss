@@ -1,7 +1,4 @@
-@import "../../node_modules/bootstrap/scss/_utilities";
-@import "../../node_modules/bootstrap/scss/_variables";
-@import "../../node_modules/bootstrap/scss/_functions";
-
+$utilities: () !default;
 $utilities: map-merge(
   $utilities,
   (
@@ -111,7 +108,12 @@ $utilities: map-merge(
         100: 100vh,
       )
     ),
+    "border-0": (
+      property: border,
+      class: "border-0",
+      values: (
+        null: none,
+      )
+    )
   )
 );
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
